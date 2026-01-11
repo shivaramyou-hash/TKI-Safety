@@ -1,3 +1,5 @@
+import { siteDetails } from '@/data/siteDetails';
+
 export default function ContactInfo() {
   return (
     <div className="contact-information">
@@ -18,7 +20,7 @@ export default function ContactInfo() {
           </div>
           <div className="contact-info-content">
             <h3>contact</h3>
-            <p>+1.809.120.670</p>
+            <p>{siteDetails.contact.phone}</p>
           </div>
         </div>
         {/* Page Contact Item End */}
@@ -30,7 +32,7 @@ export default function ContactInfo() {
           </div>
           <div className="contact-info-content">
             <h3>Email</h3>
-            <p>info@domain.com</p>
+            <p>{siteDetails.contact.email}</p>
           </div>
         </div>
         {/* Page Contact Item End */}
@@ -42,7 +44,7 @@ export default function ContactInfo() {
           </div>
           <div className="contact-info-content">
             <h3>Our Address</h3>
-            <p>37 San Juan Lane Graaf Florisstraat 22A,3021 CH</p>
+            <p>{siteDetails.contact.address}</p>
           </div>
         </div>
         {/* Page Contact Item End */}

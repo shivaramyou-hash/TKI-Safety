@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { faqs } from '@/data/faq';
+import { siteDetails } from '@/data/siteDetails';
 
 export default function Faq() {
   return (
@@ -38,8 +40,8 @@ export default function Faq() {
               {/* Faqs Image Cta Box Start */}
               <div className="faqs-img-cta-box">
                 <ul>
-                  <li><a href="#"><img src="/images/icon-phone-accent.svg" alt="" /> +91 1236547890</a></li>
-                  <li><a href="#"><img src="/images/icon-mail-accent.svg" alt="" /> info@domainname.com</a></li>
+                  <li><a href="#"><img src="/images/icon-phone-accent.svg" alt="" /> {siteDetails.contact.phone}</a></li>
+                  <li><a href="#"><img src="/images/icon-mail-accent.svg" alt="" /> {siteDetails.contact.email}</a></li>
                 </ul>
               </div>
               {/* Faqs Image Cta Box End */}
@@ -51,80 +53,32 @@ export default function Faq() {
             <div className="our-faq-section">
               {/* FAQ Accordion Start */}
               <div className="faq-accordion" id="faqaccordion">
-                {/* FAQ Item Start */}
-                <div className="accordion-item wow fadeInUp">
-                  <h2 className="accordion-header" id="heading1">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                      What industries do you serve?
-                    </button>
-                  </h2>
-                  <div id="collapse1" className="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#faqaccordion">
-                    <div className="accordion-body">
-                      <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
+                {faqs.map((faq, index) => (
+                  <div className="accordion-item wow fadeInUp" data-wow-delay={`${index * 0.2}s`} key={faq.id}>
+                    <h2 className="accordion-header" id={`heading${faq.id}`}>
+                      <button 
+                        className={`accordion-button ${index === 0 ? '' : 'collapsed'}`} 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target={`#collapse${faq.id}`} 
+                        aria-expanded={index === 0 ? 'true' : 'false'} 
+                        aria-controls={`collapse${faq.id}`}
+                      >
+                        {faq.question}
+                      </button>
+                    </h2>
+                    <div 
+                      id={`collapse${faq.id}`} 
+                      className={`accordion-collapse collapse ${index === 0 ? 'show' : ''}`} 
+                      aria-labelledby={`heading${faq.id}`} 
+                      data-bs-parent="#faqaccordion"
+                    >
+                      <div className="accordion-body">
+                        <p>{faq.answer}</p>
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* FAQ Item End */}
-
-                {/* FAQ Item Start */}
-                <div className="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                  <h2 className="accordion-header" id="heading2">
-                    <button className="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                      How do you ensure product quality?
-                    </button>
-                  </h2>
-                  <div id="collapse2" className="accordion-collapse collapse show" aria-labelledby="heading2" data-bs-parent="#faqaccordion">
-                    <div className="accordion-body">
-                      <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                    </div>
-                  </div>
-                </div>
-                {/* FAQ Item End */}
-
-                {/* FAQ Item Start */}
-                <div className="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                  <h2 className="accordion-header" id="heading3">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                      What sustainability practices do you follow?
-                    </button>
-                  </h2>
-                  <div id="collapse3" className="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#faqaccordion">
-                    <div className="accordion-body">
-                      <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                    </div>
-                  </div>
-                </div>
-                {/* FAQ Item End */}
-
-                {/* FAQ Item Start */}
-                <div className="accordion-item wow fadeInUp" data-wow-delay="0.6s">
-                  <h2 className="accordion-header" id="heading4">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                      Do you offer customized solutions?
-                    </button>
-                  </h2>
-                  <div id="collapse4" className="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#faqaccordion">
-                    <div className="accordion-body">
-                      <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                    </div>
-                  </div>
-                </div>
-                {/* FAQ Item End */}
-
-                {/* FAQ Item Start */}
-                <div className="accordion-item wow fadeInUp" data-wow-delay="0.8s">
-                  <h2 className="accordion-header" id="heading5">
-                    <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                      How do you handle safety in the workplace?
-                    </button>
-                  </h2>
-                  <div id="collapse5" className="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#faqaccordion">
-                    <div className="accordion-body">
-                      <p>We implement rigorous quality control measures at every stage of production, ensuring consistency and high standards.</p>
-                    </div>
-                  </div>
-                </div>
-                {/* FAQ Item End */}
+                ))}
               </div>
               {/* FAQ Accordion End */}
             </div>

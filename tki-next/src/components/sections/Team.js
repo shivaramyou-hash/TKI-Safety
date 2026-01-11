@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { teamMembers } from '@/data/team';
 
 export default function Team() {
   return (
@@ -24,141 +25,41 @@ export default function Team() {
         </div>
 
         <div className="row">
-          <div className="col-lg-3 col-md-6">
-            {/* Team Member Item Start */}
-            <div className="team-member-item wow fadeInUp">
-              {/* Team Image Start */}
-              <div className="team-image">
-                <div data-cursor-text="View">
-                  <figure className="image-anime">
-                    <img src="/images/team-1.jpg" alt="" />
-                  </figure>
-                </div>
+          {teamMembers.map((member) => (
+            <div className="col-lg-3 col-md-6" key={member.id}>
+              {/* Team Member Item Start */}
+              <div className="team-member-item wow fadeInUp" data-wow-delay={`${(member.id - 1) * 0.25}s`}>
+                {/* Team Image Start */}
+                <div className="team-image">
+                  <div data-cursor-text="View">
+                    <figure className="image-anime">
+                      <img src={member.image} alt={member.name} />
+                    </figure>
+                  </div>
 
-                {/* Team Social Icon Start */}
-                <div className="team-social-icon">
-                  <ul>
-                    <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-pinterest-p"></i></a></li>
-                  </ul>
+                  {/* Team Social Icon Start */}
+                  <div className="team-social-icon">
+                    <ul>
+                      <li><a href={member.social.twitter}><i className="fa-brands fa-x-twitter"></i></a></li>
+                      <li><a href={member.social.facebook}><i className="fa-brands fa-facebook-f"></i></a></li>
+                      <li><a href={member.social.instagram}><i className="fa-brands fa-instagram"></i></a></li>
+                      <li><a href={member.social.pinterest}><i className="fa-brands fa-pinterest-p"></i></a></li>
+                    </ul>
+                  </div>
+                  {/* Team Social Icon End */}
                 </div>
-                {/* Team Social Icon End */}
-              </div>
-              {/* Team Image End */}
+                {/* Team Image End */}
 
-              {/* Team Content Start */}
-              <div className="team-content">
-                <h3><Link href="#">ronald richards</Link></h3>
-                <p>manufacturing executive</p>
+                {/* Team Content Start */}
+                <div className="team-content">
+                  <h3><Link href="#">{member.name}</Link></h3>
+                  <p>{member.role}</p>
+                </div>
+                {/* Team Content End */}
               </div>
-              {/* Team Content End */}
+              {/* Team Member Item End */}
             </div>
-            {/* Team Member Item End */}
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            {/* Team Member Item Start */}
-            <div className="team-member-item wow fadeInUp" data-wow-delay="0.25s">
-              {/* Team Image Start */}
-              <div className="team-image">
-                <div data-cursor-text="View">
-                  <figure className="image-anime">
-                    <img src="/images/team-2.jpg" alt="" />
-                  </figure>
-                </div>
-
-                {/* Team Social Icon Start */}
-                <div className="team-social-icon">
-                  <ul>
-                    <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-pinterest-p"></i></a></li>
-                  </ul>
-                </div>
-                {/* Team Social Icon End */}
-              </div>
-              {/* Team Image End */}
-
-              {/* Team Content Start */}
-              <div className="team-content">
-                <h3><Link href="#">brooklyn simmons</Link></h3>
-                <p>industrial engineer</p>
-              </div>
-              {/* Team Content End */}
-            </div>
-            {/* Team Member Item End */}
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            {/* Team Member Item Start */}
-            <div className="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-              {/* Team Image Start */}
-              <div className="team-image">
-                <div data-cursor-text="View">
-                  <figure className="image-anime">
-                    <img src="/images/team-3.jpg" alt="" />
-                  </figure>
-                </div>
-
-                {/* Team Social Icon Start */}
-                <div className="team-social-icon">
-                  <ul>
-                    <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-pinterest-p"></i></a></li>
-                  </ul>
-                </div>
-                {/* Team Social Icon End */}
-              </div>
-              {/* Team Image End */}
-
-              {/* Team Content Start */}
-              <div className="team-content">
-                <h3><Link href="#">cameron williamson</Link></h3>
-                <p>production supervisor</p>
-              </div>
-              {/* Team Content End */}
-            </div>
-            {/* Team Member Item End */}
-          </div>
-
-          <div className="col-lg-3 col-md-6">
-            {/* Team Member Item Start */}
-            <div className="team-member-item wow fadeInUp" data-wow-delay="0.5s">
-              {/* Team Image Start */}
-              <div className="team-image">
-                <div data-cursor-text="View">
-                  <figure className="image-anime">
-                    <img src="/images/team-4.jpg" alt="" />
-                  </figure>
-                </div>
-
-                {/* Team Social Icon Start */}
-                <div className="team-social-icon">
-                  <ul>
-                    <li><a href="#"><i className="fa-brands fa-x-twitter"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-instagram"></i></a></li>
-                    <li><a href="#"><i className="fa-brands fa-pinterest-p"></i></a></li>
-                  </ul>
-                </div>
-                {/* Team Social Icon End */}
-              </div>
-              {/* Team Image End */}
-
-              {/* Team Content Start */}
-              <div className="team-content">
-                <h3><Link href="#">darlene robertson</Link></h3>
-                <p>project manager</p>
-              </div>
-              {/* Team Content End */}
-            </div>
-            {/* Team Member Item End */}
-          </div>
+          ))}
         </div>
       </div>
     </div>

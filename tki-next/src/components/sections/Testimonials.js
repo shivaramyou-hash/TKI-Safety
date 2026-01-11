@@ -1,3 +1,5 @@
+import { testimonials } from '@/data/testimonials';
+
 export default function Testimonials() {
   return (
     <div className="our-testimonial">
@@ -27,95 +29,33 @@ export default function Testimonials() {
               <div className="testimonial-slider">
                 <div className="swiper">
                   <div className="swiper-wrapper" data-cursor-text="Drag">
-                    {/* Testimonial Slide Start */}
-                    <div className="swiper-slide">
-                      <div className="testimonial-item">
-                        <div className="testimonial-rating">
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                        </div>
-
-                        <div className="testimonial-content">
-                          <p>"The team&apos;s attention to detail and commitment to quality exceeded our expectations. They delivered on time, and their innovative solutions improved our production efficiency by 30%. Highly recommended!"</p>
-                        </div>
-
-                        <div className="testimonial-body">
-                          <div className="author-image">
-                            <figure className="image-anime">
-                              <img src="/images/author-1.jpg" alt="" />
-                            </figure>
+                    {testimonials.map((testimonial) => (
+                      <div className="swiper-slide" key={testimonial.id}>
+                        <div className="testimonial-item">
+                          <div className="testimonial-rating">
+                            {[...Array(testimonial.rating)].map((_, i) => (
+                              <i className="fa-solid fa-star" key={i}></i>
+                            ))}
                           </div>
-                          <div className="author-content">
-                            <h3>Brooklyn Simmons</h3>
-                            <p>Homeowner</p>
+
+                          <div className="testimonial-content">
+                            <p>{testimonial.text}</p>
                           </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Testimonial Slide End */}
 
-                    {/* Testimonial Slide Start */}
-                    <div className="swiper-slide">
-                      <div className="testimonial-item">
-                        <div className="testimonial-rating">
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                        </div>
-
-                        <div className="testimonial-content">
-                          <p>"The team&apos;s attention to detail and commitment to quality exceeded our expectations. They delivered on time, and their innovative solutions improved our production efficiency by 30%. Highly recommended!"</p>
-                        </div>
-
-                        <div className="testimonial-body">
-                          <div className="author-image">
-                            <figure className="image-anime">
-                              <img src="/images/author-2.jpg" alt="" />
-                            </figure>
-                          </div>
-                          <div className="author-content">
-                            <h3>John Doe</h3>
-                            <p>Director</p>
+                          <div className="testimonial-body">
+                            <div className="author-image">
+                              <figure className="image-anime">
+                                <img src={testimonial.image} alt={testimonial.name} />
+                              </figure>
+                            </div>
+                            <div className="author-content">
+                              <h3>{testimonial.name}</h3>
+                              <p>{testimonial.role}</p>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    {/* Testimonial Slide End */}
-
-                    {/* Testimonial Slide Start */}
-                    <div className="swiper-slide">
-                      <div className="testimonial-item">
-                        <div className="testimonial-rating">
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                          <i className="fa-solid fa-star"></i>
-                        </div>
-
-                        <div className="testimonial-content">
-                          <p>"The team&apos;s attention to detail and commitment to quality exceeded our expectations. They delivered on time, and their innovative solutions improved our production efficiency by 30%. Highly recommended!"</p>
-                        </div>
-
-                        <div className="testimonial-body">
-                          <div className="author-image">
-                            <figure className="image-anime">
-                              <img src="/images/author-3.jpg" alt="" />
-                            </figure>
-                          </div>
-                          <div className="author-content">
-                            <h3>Robert Dan</h3>
-                            <p>Manager</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    {/* Testimonial Slide End */}
+                    ))}
                   </div>
                   <div className="testimonial-btn">
                     <div className="testimonial-button-prev"></div>
@@ -133,69 +73,14 @@ export default function Testimonials() {
         <div className="testimonial-company-slider">
           <div className="swiper">
             <div className="swiper-wrapper" data-cursor-text="Drag">
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-1.svg" alt="" />
+              {/* Company Partner Items (Static for now, can also be componentized) */}
+              {[1, 2, 3, 4, 5, 6].map((num) => (
+                <div className="swiper-slide" key={num}>
+                  <div className="company-logo">
+                    <img src={`/images/icon-company-${num}.svg`} alt="" />
+                  </div>
                 </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-2.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-3.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-4.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-5.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-6.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-1.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
-
-              {/* Company Partner Item Start */}
-              <div className="swiper-slide">
-                <div className="company-logo">
-                  <img src="/images/icon-company-2.svg" alt="" />
-                </div>
-              </div>
-              {/* Company Partner Item End */}
+              ))}
             </div>
           </div>
         </div>

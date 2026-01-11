@@ -1,4 +1,10 @@
+import { whatWeDo } from '@/data/services';
+
 export default function WhatWeDo() {
+  // Split the data into two columns for the layout
+  const col1 = whatWeDo.slice(0, 3);
+  const col2 = whatWeDo.slice(3, 6);
+
   return (
     <div className="what-we-do">
       <div className="container-fluid">
@@ -16,82 +22,40 @@ export default function WhatWeDo() {
               {/* What We Do List Start */}
               <div className="what-we-do-list">
                 <div className="what-we-do-list-box-1">
-                  {/* What We Do Item Start */}
-                  <div className="what-we-do-item">
-                    <div className="icon-box">
-                      <img src="/images/icon-who-we-do-1.svg" alt="" />
+                  {col1.map((item) => (
+                    <div className="what-we-do-item" key={item.id}>
+                      <div className="icon-box">
+                        <img src={item.icon} alt={item.title} />
+                      </div>
+                      <div className="what-we-item-content">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                    <div className="what-we-item-content">
-                      <h3>Automotive Manfacturing</h3>
-                      <p>Streamlining production with advanced tech.</p>
-                    </div>
-                  </div>
-                  {/* What We Do Item End */}
-
-                  {/* What We Do Item Start */}
-                  <div className="what-we-do-item">
-                    <div className="icon-box">
-                      <img src="/images/icon-who-we-do-2.svg" alt="" />
-                    </div>
-                    <div className="what-we-item-content">
-                      <h3>Civil Engineering</h3>
-                      <p>Streamlining production with advanced tech.</p>
-                    </div>
-                  </div>
-                  {/* What We Do Item End */}
-
-                  {/* What We Do Item Start */}
-                  <div className="what-we-do-item">
-                    <div className="icon-box">
-                      <img src="/images/icon-who-we-do-3.svg" alt="" />
-                    </div>
-                    <div className="what-we-item-content">
-                      <h3>Construction Industry</h3>
-                      <p>Streamlining production with advanced tech.</p>
-                    </div>
-                  </div>
-                  {/* What We Do Item End */}
+                  ))}
                 </div>
 
                 <div className="what-we-do-list-box-2">
-                  {/* What We Do Item Start */}
-                  <div className="what-we-do-item">
-                    <div className="icon-box">
-                      <img src="/images/icon-who-we-do-4.svg" alt="" />
+                  {col2.map((item) => (
+                    <div className="what-we-do-item" key={item.id}>
+                      <div className="icon-box">
+                        <img src={item.icon} alt={item.title} />
+                      </div>
+                      <div className="what-we-item-content">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </div>
                     </div>
-                    <div className="what-we-item-content">
-                      <h3>Energy & Power Engineering</h3>
-                      <p>Streamlining production with advanced tech.</p>
-                    </div>
-                  </div>
-                  {/* What We Do Item End */}
-
-                  {/* What We Do Item Start */}
-                  <div className="what-we-do-item">
-                    <div className="icon-box">
-                      <img src="/images/icon-who-we-do-5.svg" alt="" />
-                    </div>
-                    <div className="what-we-item-content">
-                      <h3>Oil & Gas Refineries</h3>
-                      <p>Streamlining production with advanced tech.</p>
-                    </div>
-                  </div>
-                  {/* What We Do Item End */}
-
-                  {/* What We Do Item Start */}
-                  <div className="what-we-do-item">
-                    <div className="icon-box">
-                      <img src="/images/icon-who-we-do-6.svg" alt="" />
-                    </div>
-                    <div className="what-we-item-content">
-                      <h3>Mechanical Engineering</h3>
-                      <p>Streamlining production with advanced tech.</p>
-                    </div>
-                  </div>
-                  {/* What We Do Item End */}
+                  ))}
                 </div>
               </div>
               {/* What We Do List End */}
+
+              {/* What We Do Footer Start */}
+              <div className="what-we-do-footer">
+                <p>Lorem ipsum is a placeholder text commonly used <span>to demonstrate</span></p>
+              </div>
+              {/* What We Do Footer End */}
             </div>
             {/* What We Do Content End */}
           </div>
@@ -100,8 +64,14 @@ export default function WhatWeDo() {
             {/* What We Do Image Start */}
             <div className="what-we-do-image">
               <figure className="image-anime">
-                <img src="/images/what-we-do.jpg" alt="" />
+                <img src="/images/what-we-do-image.jpg" alt="" />
               </figure>
+
+              {/* Contact Now Circle Start */}
+              <div className="contact-now-circle">
+                <img src="/images/contact-now-circle.svg" alt="" />
+              </div>
+              {/* Contact Now Circle End */}
             </div>
             {/* What We Do Image End */}
           </div>
