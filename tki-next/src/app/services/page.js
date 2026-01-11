@@ -1,5 +1,5 @@
 
-import Link from 'next/link';
+import PageHeader from '@/components/layout/PageHeader';
 
 export const metadata = {
   title: 'Services | Toplax - Factory & Industry HTML Template',
@@ -9,27 +9,7 @@ export const metadata = {
 export default function Services() {
   return (
     <>
-      {/* Page Header Start */}
-      <div className="page-header parallaxie">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-12">
-              {/* Page Header Box Start */}
-              <div className="page-header-box">
-                <h1 className="text-anime-style-2" data-cursor="-opaque">Our <span>services</span></h1>
-                <nav className="wow fadeInUp">
-                  <ol className="breadcrumb">
-                    <li className="breadcrumb-item"><Link href="/">home</Link></li>
-                    <li className="breadcrumb-item active" aria-current="page">our services</li>
-                  </ol>
-                </nav>
-              </div>
-              {/* Page Header Box End */}
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Page Header End */}
+      <PageHeader title={<>Our <span>services</span></>} activePage="our services" />
 
       {/* Page Services Start */}
       <div className="page-services">
