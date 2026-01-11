@@ -4,6 +4,7 @@ import "./globals.css";
 import Script from 'next/script';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Preloader from "../components/Preloader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,13 +47,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* Preloader */}
-        <div className="preloader">
-          <div className="loading-container">
-            <div className="loading"></div>
-            <div id="loading-icon"><img src="/images/loader.svg" alt="" /></div>
-          </div>
-        </div>
+        <Preloader />
 
         <Header />
         
@@ -78,7 +73,7 @@ export default function RootLayout({ children }) {
         <Script src="/js/ScrollTrigger.min.js" strategy="afterInteractive" />
         <Script src="/js/jquery.mb.YTPlayer.min.js" strategy="afterInteractive" />
         <Script src="/js/wow.min.js" strategy="afterInteractive" />
-        <Script src="/js/function.js" strategy="lazyOnload" />
+        <Script src="/js/function.js" strategy="afterInteractive" />
       </body>
     </html>
   );
