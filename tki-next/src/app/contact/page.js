@@ -5,8 +5,8 @@ import ContactForm from '@/components/sections/ContactForm';
 import GoogleMap from '@/components/sections/GoogleMap';
 
 export const metadata = {
-  title: 'Contact Us | Toplax - Factory & Industry HTML Template',
-  description: 'Contact Toplax Factory & Industry',
+  title: 'Contact Us | TKI Safety - Factory & Industry HTML Template',
+  description: 'Contact TKI Safety Factory & Industry',
 }
 
 export default function Contact() {

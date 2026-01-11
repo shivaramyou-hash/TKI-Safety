@@ -10,7 +10,7 @@ export default function Header() {
             <div className="col-lg-3">
               <div className="site-logo">
                 <Link href="/">
-                  <img src="/images/logo.svg" alt="Logo" />
+                  <img src="/images/logo.png" alt="TKI Safety" />
                 </Link>
               </div>
               {/* Logo End */}

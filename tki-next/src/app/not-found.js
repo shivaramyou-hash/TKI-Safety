@@ -3,7 +3,7 @@ import Image from 'next/image';
 import PageHeader from '@/components/layout/PageHeader';
 
 export const metadata = {
-  title: 'Page Not Found | Toplax',
+  title: 'Page Not Found | TKI Safety',
   description: 'Page not found',
 }
 

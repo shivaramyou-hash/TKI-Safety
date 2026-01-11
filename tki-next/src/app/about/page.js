@@ -11,8 +11,8 @@ import Testimonials from '@/components/sections/Testimonials';
 import Faq from '@/components/sections/Faq';
 
 export const metadata = {
-  title: 'About Us | Toplax - Factory & Industry HTML Template',
-  description: 'About Toplax Factory & Industry',
+  title: 'About Us | TKI Safety - Factory & Industry HTML Template',
+  description: 'About TKI Safety Factory & Industry',
 }
 
 export default function About() {

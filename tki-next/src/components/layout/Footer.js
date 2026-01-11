@@ -31,7 +31,7 @@ export default function Footer() {
               <div className="about-footer">
                 {/* Footer Logo Start */}
                 <div className="footer-logo">
-                  <img src="/images/footer-logo.svg" alt="" />
+                  <img src="/images/logo.png" alt="TKI Safety" />
                 </div>
                 {/* Footer Logo End */}
 

@@ -5,8 +5,8 @@ import Footer from '@/components/layout/Footer';
 import Preloader from '@/components/layout/Preloader';
 
 export const metadata = {
-  title: 'Toplax - Factory & Industry HTML Template',
-  description: 'Toplax Factory & Industry HTML Template',
+  title: 'TKI Safety',
+  description: 'TKI Safety Factory & Industry HTML Template',
 }
 
 export default function RootLayout({ children }) {
