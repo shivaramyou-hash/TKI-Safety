@@ -45,34 +45,34 @@ export default function RootLayout({ children }) {
         {/* Jquery Library File */}
         <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
         {/* Bootstrap js file */}
-        <Script src="/js/bootstrap.min.js" strategy="lazyOnload" />
+        <Script src="/js/bootstrap.min.js" strategy="afterInteractive" />
         {/* Validator js file */}
-        <Script src="/js/validator.min.js" strategy="lazyOnload" />
+        <Script src="/js/validator.min.js" strategy="afterInteractive" />
         {/* SlickNav js file */}
-        <Script src="/js/jquery.slicknav.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.slicknav.js" strategy="afterInteractive" />
         {/* Swiper js file */}
-        <Script src="/js/swiper-bundle.min.js" strategy="lazyOnload" />
+        <Script src="/js/swiper-bundle.min.js" strategy="afterInteractive" />
         {/* Counter js file */}
-        <Script src="/js/jquery.waypoints.min.js" strategy="lazyOnload" />
-        <Script src="/js/jquery.counterup.min.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.waypoints.min.js" strategy="afterInteractive" />
+        <Script src="/js/jquery.counterup.min.js" strategy="afterInteractive" />
         {/* Isotop js file */}
-        <Script src="/js/isotope.min.js" strategy="lazyOnload" />
+        <Script src="/js/isotope.min.js" strategy="afterInteractive" />
         {/* Magnific js file */}
-        <Script src="/js/jquery.magnific-popup.min.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.magnific-popup.min.js" strategy="afterInteractive" />
         {/* SmoothScroll */}
-        <Script src="/js/SmoothScroll.js" strategy="lazyOnload" />
+        <Script src="/js/SmoothScroll.js" strategy="afterInteractive" />
         {/* Parallax js */}
-        <Script src="/js/parallaxie.js" strategy="lazyOnload" />
+        <Script src="/js/parallaxie.js" strategy="afterInteractive" />
         {/* MagicCursor js file */}
         <Script src="/js/gsap.min.js" strategy="beforeInteractive" />
-        <Script src="/js/magiccursor.js" strategy="lazyOnload" />
+        <Script src="/js/magiccursor.js" strategy="afterInteractive" />
         {/* Text Effect js file */}
-        <Script src="/js/SplitText.js" strategy="lazyOnload" />
-        <Script src="/js/ScrollTrigger.min.js" strategy="lazyOnload" />
+        <Script src="/js/SplitText.js" strategy="afterInteractive" />
+        <Script src="/js/ScrollTrigger.min.js" strategy="afterInteractive" />
         {/* YTPlayer js File */}
-        <Script src="/js/jquery.mb.YTPlayer.min.js" strategy="lazyOnload" />
+        <Script src="/js/jquery.mb.YTPlayer.min.js" strategy="afterInteractive" />
         {/* Wow js file */}
-        <Script src="/js/wow.min.js" strategy="lazyOnload" />
+        <Script src="/js/wow.min.js" strategy="afterInteractive" />
         {/* Main Custom js file */}
         <Script src="/js/function.js" strategy="afterInteractive" />
       </body>
