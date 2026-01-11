@@ -19,7 +19,7 @@
 	 		$("header.main-header").css("height", $('header .header-sticky').outerHeight());
 		}	
 	
-		$window.on("scroll", function() {
+		$(window).on("scroll", function() {
 			var fromTop = $(window).scrollTop();
 			setHeaderHeight();
 			var headerHeight = $('header .header-sticky').outerHeight()
@@ -35,7 +35,7 @@
 	});
 
 	if($("a[href='#top']").length){
-		$(document).on("click", "a[href='#top']", function() {
+		$("a[href='#top']").click(function() {
 			$("html, body").animate({ scrollTop: 0 }, "slow");
 			return false;
 		});
@@ -281,7 +281,7 @@
 			url: "form-process.php",
 			data: $contactform.serialize(),
 			success : function(text){
-				if (text === "success"){
+				if (text == "success"){
 					formSuccess();
 				} else {
 					submitMSG(false,text);
@@ -320,7 +320,7 @@
 			});
 				
 			/* Filter items on click */
-			var $menudisesnav = $(".our-Project-nav li a");
+			var $menudisesnav=$(".our-Project-nav li a");
 				$menudisesnav.on('click', function (e) { 
 			
 				var filterValue = $(this).attr('data-filter');
