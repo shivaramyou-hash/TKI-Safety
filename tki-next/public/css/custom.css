@@ -706,6 +706,106 @@ header.main-header .header-sticky.active{
     padding: 5px 0;
 }
 
+
+/* Force hide utility for React state control */
+.main-menu ul li.submenu.force-hide ul,
+.main-menu ul li.submenu.force-hide ul.mega-menu-wrapper {
+	visibility: hidden !important;
+	opacity: 0 !important;
+	transform: scaleY(0) !important;
+	pointer-events: none !important;
+}
+
+.main-menu ul li.submenu.mega-menu {
+	position: static !important;
+}
+
+/* Match "Pages" dropdown style: Orange background and rounded corners */
+.main-header .main-menu ul li.submenu.mega-menu ul.mega-menu-wrapper {
+	position: absolute !important;
+	width: calc(100vw - 100px) !important;
+	left: 50% !important;
+	transform: translateX(-50%) scaleY(0) !important;
+	background: var(--accent-color) !important;
+	background-color: var(--accent-color) !important;
+	border-radius: 20px !important;
+	padding: 60px 40px !important;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.15) !important;
+	transition: all 0.3s ease-in-out !important;
+	visibility: hidden !important;
+	opacity: 0 !important;
+	display: block !important;
+	z-index: 99999 !important;
+	top: 100% !important;
+	margin: 0 !important;
+	border: none !important;
+}
+
+.main-menu ul li.submenu.mega-menu:hover > ul.mega-menu-wrapper {
+	visibility: visible !important;
+	opacity: 1 !important;
+	transform: translateX(-50%) scaleY(1) !important;
+}
+
+.mega-menu-wrapper li {
+	background: transparent !important;
+}
+
+.mega-menu-wrapper > li {
+	display: block !important;
+	width: 100% !important;
+}
+
+.mega-menu-section {
+	padding-bottom: 20px;
+}
+
+.mega-menu-section h4 {
+	color: #0033CC !important; /* Keep blue color */
+	font-size: 16px !important;
+	font-weight: 800 !important;
+	text-transform: uppercase !important;
+	margin-bottom: 25px !important;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3) !important;
+	padding-bottom: 12px !important;
+	display: block !important;
+	min-height: 50px !important; /* Ensure all headers have the same height for alignment */
+}
+
+.mega-menu-section ul {
+	position: static !important;
+	width: 100% !important;
+	background: transparent !important;
+	visibility: visible !important;
+	opacity: 1 !important;
+	transform: none !important;
+	padding: 0 !important;
+	display: block !important;
+	box-shadow: none !important;
+	border: none !important;
+	margin: 0 !important;
+}
+
+.mega-menu-section ul li {
+	margin-bottom: 12px !important;
+	display: block !important;
+}
+
+.mega-menu-section ul li a {
+	color: var(--white-color) !important; /* White text for items on orange background */
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	padding: 0 !important;
+	transition: all 0.3s ease !important;
+	display: inline-block !important;
+}
+
+.mega-menu-section ul li a:hover {
+	color: var(--primary-color) !important; /* Hover state turns dark */
+	padding-left: 10px !important;
+}
+
 .main-menu ul ul li .nav-link:hover,
 .main-menu ul ul li .nav-link:focus{
 	color: var(--primary-color);
