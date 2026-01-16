@@ -1,6 +1,21 @@
+"use client";
 import Link from 'next/link';
+import React from 'react';
 
 export default function Header() {
+  const [isForceClosed, setIsForceClosed] = React.useState(false);
+
+  const closeMenu = () => {
+    setIsForceClosed(true);
+    if (typeof window !== 'undefined' && window.jQuery) {
+      window.jQuery('#menu').slicknav('close');
+    }
+  };
+
+  const handleMouseEnter = () => {
+    setIsForceClosed(false);
+  };
+
   return (
     <>
       {/* Topbar Section Start */}
@@ -65,33 +80,92 @@ export default function Header() {
               <div className="collapse navbar-collapse main-menu">
                 <div className="nav-menu-wrapper">
                   <ul className="navbar-nav mr-auto" id="menu">
-                    <li className="nav-item submenu"><Link className="nav-link" href="/">Home</Link>
+                    <li 
+                      className={`nav-item submenu ${isForceClosed ? 'force-hide' : ''}`}
+                      onMouseEnter={handleMouseEnter}
+                    >
+                      <Link onClick={closeMenu} className="nav-link" href="/">Home</Link>
                       <ul>
-                        <li className="nav-item"><Link className="nav-link" href="/">Home - Image</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/index-video">Home - Video</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/index-slider">Home - Slider</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/">Home - Image</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/index-video">Home - Video</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/index-slider">Home - Slider</Link></li>
                       </ul>
                     </li>                                
-                    <li className="nav-item"><Link className="nav-link" href="/about">About Us</Link></li>
-                    <li className="nav-item"><Link className="nav-link" href="/services">Services</Link></li>
-                    <li className="nav-item"><Link className="nav-link" href="/blog">Blog</Link></li>
-                    <li className="nav-item"><Link className="nav-link" href="/projects">Projects</Link></li>
-                    <li className="nav-item submenu"><a className="nav-link" href="#">Pages</a>
-                      <ul>                                        
-                        <li className="nav-item"><Link className="nav-link" href="/service-single">Service Details</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/blog-single">Blog Details</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/project-single">Project Details</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/team">Team</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/team-single">Team Details</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/pricing">Pricing Plan</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/testimonial">Testimonials</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/image-gallery">Image Gallery</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/video-gallery">Video Gallery</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/faqs">FAQs</Link></li>
-                        <li className="nav-item"><Link className="nav-link" href="/404">404</Link></li>
+                    <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/about">About Us</Link></li>
+                    <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/services">Services</Link></li>
+                    <li 
+                      className={`nav-item submenu mega-menu ${isForceClosed ? 'force-hide' : ''}`}
+                      onMouseEnter={handleMouseEnter}
+                    >
+                      <Link onClick={closeMenu} className="nav-link" href="/products">Products</Link>
+                      <ul className="mega-menu-wrapper">
+                        <li>
+                          <div className="container">
+                            <div className="row">
+                              <div className="col-lg-4 col-md-4">
+                                <div className="mega-menu-section">
+                                  <h4>Specialised Vehicles, Machinery & Equipment</h4>
+                                  <ul>
+                                    <li><Link onClick={closeMenu} href="/products?type=fire-fighting">Fire Fighting</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=environmental-protection">Environmental Protection</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=disaster-management">Disaster Management</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=communication">Communication</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=aerial-rescue">Aerial Rescue</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div className="col-lg-4 col-md-4">
+                                <div className="mega-menu-section">
+                                  <h4>Police and Military Equipment & Machinery</h4>
+                                  <ul>
+                                    <li><Link onClick={closeMenu} href="/products?type=police-tactical">Police Tactical</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=environmental-protection">Environmental Protection</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=disaster-management">Disaster Management</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=communication">Communication</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=enforcement-monitoring">Enforcement and Monitoring</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                              <div className="col-lg-4 col-md-4">
+                                <div className="mega-menu-section">
+                                  <h4>Firefighting Equipment</h4>
+                                  <ul>
+                                    <li><Link onClick={closeMenu} href="/products?type=detection-system">Detection System</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=alarm-system">Alarm System</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=fixed-installation">Fixed Installation</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=portable-firefighting">Portable Firefighting</Link></li>
+                                    <li><Link onClick={closeMenu} href="/products?type=signage">Signage</Link></li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
                       </ul>
                     </li>
-                    <li className="nav-item"><Link className="nav-link" href="/contact">Contact Us</Link></li>                             
+                    <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/products">Products</Link></li>
+                    <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/projects">Projects</Link></li>
+                    <li 
+                      className={`nav-item submenu ${isForceClosed ? 'force-hide' : ''}`}
+                      onMouseEnter={handleMouseEnter}
+                    >
+                      <a className="nav-link" href="#">Pages</a>
+                      <ul>                                        
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/service-single">Service Details</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/blog-single">Blog Details</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/project-single">Project Details</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/team">Team</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/team-single">Team Details</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/pricing">Pricing Plan</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/testimonial">Testimonials</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/image-gallery">Image Gallery</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/video-gallery">Video Gallery</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/faqs">FAQs</Link></li>
+                        <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/404">404</Link></li>
+                      </ul>
+                    </li>
+                    <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/contact">Contact Us</Link></li>
+                             
                   </ul>
                 </div>
 

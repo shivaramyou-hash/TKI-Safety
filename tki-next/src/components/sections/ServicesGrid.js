@@ -19,7 +19,7 @@ export default function ServicesGrid() {
                 </div>
 
                 <div className="service-footer">
-                  <Link href={service.link} className="service-btn">
+                  <Link href={`/services/${service.slug}`} className="service-btn">
                     <img src="/images/arrow-dark.svg" alt="" />
                   </Link>
                 </div>

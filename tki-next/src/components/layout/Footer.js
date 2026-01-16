@@ -23,10 +23,10 @@ export default function Footer() {
                 </div>
                 {/* Footer Contact Circle End */}
               </div>
-              {/* Footer Header End */}                  
+              {/* Footer Header End */}
             </div>
-            
-            <div className="col-lg-6 col-md-12">
+
+            <div className="col-lg-5 col-md-12">
               {/* About Footer Start */}
               <div className="about-footer">
                 {/* Footer Logo Start */}
@@ -37,10 +37,10 @@ export default function Footer() {
 
                 {/* About Footer Content Start */}
                 <div className="about-footer-content">
-                  <p>We are committed to providing personalized industrial solutions.</p>
-                </div>           
+                  <p>TKI Fire and Health Safety Co. Ltd. is a professional supplier of quality medical, military, safety, fire equipment and solutions in Mauritius and countries in the Indian Ocean.</p>
+                </div>
                 {/* About Footer Content End */}
-                 
+
                 {/* Footer Social Link Start */}
                 <div className="footer-social-links">
                   <ul>
@@ -54,7 +54,7 @@ export default function Footer() {
               </div>
               {/* About Footer End */}
             </div>
-            
+
             <div className="col-lg-2 col-md-4 col-6">
               {/* Footer Links Start */}
               <div className="footer-links">
@@ -84,17 +84,16 @@ export default function Footer() {
             </div>
 
             <div className="col-lg-2 col-md-4 col-12">
-              {/* Footer Links Start */}
               <div className="footer-links">
                 <h3>Contact</h3>
                 <ul>
-                  <li>+91 123654789</li>
-                  <li>info@domainname.com</li>
-                  <li>520, West Valley, Amin and minim</li>
+                  <li><a href="tel:+23059424281">+230 5942 4281</a></li>
+                  <li><a href="mailto:tkifire.healthsafety@gmail.com">info@tkisafety.com</a></li>
+                  <li>SSR Street,<br />Trois Boutiques 52011,<br />Mauritius</li>
                 </ul>
               </div>
-              {/* Footer Links End */}
             </div>
+
           </div>
 
           {/* Footer Copyright Section Start */}
@@ -103,7 +102,7 @@ export default function Footer() {
               <div className="col-lg-12">
                 {/* Footer Copyright Start */}
                 <div className="footer-copyright-text">
-                  <p>Copyright © 2024 All Rights Reserved.</p>
+                  <p>Copyright © {new Date().getFullYear()} All Rights Reserved.</p>
                 </div>
                 {/* Footer Copyright End */}
               </div>
