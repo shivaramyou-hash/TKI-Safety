@@ -109,7 +109,7 @@ export default function Home() {
       desc: "Strategic tactical gear and advanced machinery engineered for defense and mission-critical safety.",
       image: "/images/tactical_armour_premium.png",
       badge: "CERTIFIED",
-      link: "/service-single"
+      link: "/service-single" 
     },
     {
       title: "FIREFIGHTING EQUIPMENT",
@@ -204,7 +204,7 @@ export default function Home() {
 
                         {/* About Content Btn Start */}
                         <div className="about-content-btn wow fadeInUp" data-wow-delay="0.75s">
-                          <Link href="/about" className="btn-default"><span>learn more</span></Link>
+                          <Link href="/about" className="btn-default btn-red"><span>learn more</span></Link>
                         </div>
                         {/* About Content Btn End */}
 
@@ -310,9 +310,7 @@ export default function Home() {
                         <Link href={service.link} className="details-btn">
                           Details <i className="fas fa-arrow-right"></i>
                         </Link>
-                        <button className="quote-btn">
-                          QUOTE
-                        </button>
+                      
                       </div>
                     </div>
                   </motion.div>
