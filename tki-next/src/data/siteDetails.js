@@ -1,7 +1,7 @@
 export const siteDetails = {
   contact: {
-    phone: '+1.809.120.670',
-    email: 'info@domain.com',
+    phone: '(+230) 5942 4281',
+    email: 'info@tkisafety.com',
     address: '37 San Juan Lane Graaf Florisstraat 22A,3021 CH',
   },
   social: {

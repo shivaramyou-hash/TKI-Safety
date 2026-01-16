@@ -40,7 +40,7 @@ export default function Header() {
                       <div className="icon-box">
                         <img src="/images/icon-phone.svg" alt="" />
                       </div>
-                      <p>+(123) 698-5245</p>
+                      <p>(+230) 5942 4281</p>
                     </a>
                   </li>
                   <li>
@@ -48,7 +48,7 @@ export default function Header() {
                       <div className="icon-box">
                         <img src="/images/icon-mail.svg" alt="" />
                       </div>
-                      <p>info@domain.com</p>
+                      <p>info@tkisafety.com</p>
                     </a>
                   </li>
                 </ul>
