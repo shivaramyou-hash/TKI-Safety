@@ -341,9 +341,9 @@ body{
 
 .loading-container,
 .loading{
-	height: 100px;
+	height: 200px;
 	position: relative;
-	width: 100px;
+	width: 200px;
 	border-radius: 100%;
 }
 
