@@ -43,8 +43,8 @@ a {
 
 /* Logo Size Override */
 .site-logo img {
-  max-width: 200px !important;
-  height: auto;
+  max-width: 400px !important ;
+  height: 40px;
 }
 
 .footer-logo img {
