@@ -336,7 +336,7 @@ export default function Home() {
             <div className="col-lg-6">
               {/* Section Title Start */}
               <div className="section-title">
-                <h3 className="wow fadeInUp">our story</h3>
+                <h3 className="wow fadeInUp">our journey</h3>
                 <h2 className="text-anime-style-2" data-cursor="-opaque">
                   Delivering certified fire & safety solutions <span>that protect life, property & the environment</span>
                 </h2>
@@ -520,12 +520,10 @@ export default function Home() {
               <div className="our-Project-nav wow fadeInUp" data-wow-delay="0.4s">
                 <ul>
                   <li><a href="#" className="active-btn" data-filter="*">all</a></li>
-                  <li><a href="#" data-filter=".consultancy">consultancy</a></li>
                   <li><a href="#" data-filter=".installation">installation</a></li>
+                  <li><a href="#" data-filter=".equipment">equipment</a></li>
                   <li><a href="#" data-filter=".training">training</a></li>
-                  <li><a href="#" data-filter=".equipment">equipment supply</a></li>
-                  <li><a href="#" data-filter=".public">public sector</a></li>
-                  <li><a href="#" data-filter=".private">private sector</a></li>
+                  <li><a href="#" data-filter=".public">Consultancy</a></li>
                 </ul>
               </div>
             </div>
