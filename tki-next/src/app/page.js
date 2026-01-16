@@ -310,7 +310,6 @@ export default function Home() {
                         <Link href={service.link} className="details-btn">
                           Details <i className="fas fa-arrow-right"></i>
                         </Link>
-                      
                       </div>
                     </div>
                   </motion.div>

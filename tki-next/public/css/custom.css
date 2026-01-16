@@ -49,6 +49,7 @@
 	--text-color			: #81848A;
 	--accent-color			: #FF9900;
 	--red-color				: #FF0000;
+	--green-color			: #28a745;
 	--white-color			: #FFFFFF;
 	--divider-color			: #EBEBEB;
 	--dark-divider-color	: #FFFFFF1A;
@@ -1214,7 +1215,7 @@ header.main-header .header-sticky.active{
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    background: url('../images/icon-check.svg') no-repeat center left;
+    background: url('../images/icon-check-green.svg') no-repeat center left;
     background-size: cover;
 }
 
