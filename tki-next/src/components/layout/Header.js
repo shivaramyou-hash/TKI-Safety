@@ -87,6 +87,7 @@ export default function Header() {
                       <Link onClick={closeMenu} className="nav-link" href="/">Home</Link>
                      
                     </li>           
+{/* Products Menu - Temporarily disabled
                        <li 
                       className={`nav-item submenu mega-menu ${isForceClosed ? 'force-hide' : ''}`}
                       onMouseEnter={handleMouseEnter}
@@ -137,6 +138,11 @@ export default function Header() {
                         </li>
                       </ul>
                     </li>
+*/}
+                    <li className="nav-item">
+                      <Link onClick={closeMenu} className="nav-link" href="/coming-soon">Products</Link>
+                    </li>
+{/* Training Menu - Temporarily disabled
                        <li 
                       className={`nav-item submenu mega-menu ${isForceClosed ? 'force-hide' : ''}`}
                       onMouseEnter={handleMouseEnter}
@@ -186,7 +192,12 @@ export default function Header() {
                           </div>
                         </li>
                       </ul>
+                    </li>
+*/}
+                    <li className="nav-item">
+                      <Link onClick={closeMenu} className="nav-link" href="/coming-soon">Training</Link>
                     </li>        
+{/* Services Menu - Temporarily disabled
                        <li 
                       className={`nav-item submenu mega-menu ${isForceClosed ? 'force-hide' : ''}`}
                       onMouseEnter={handleMouseEnter}
@@ -236,6 +247,10 @@ export default function Header() {
                           </div>
                         </li>
                       </ul>
+                    </li>
+*/}
+                    <li className="nav-item">
+                      <Link onClick={closeMenu} className="nav-link" href="/coming-soon">Services</Link>
                     </li>             
                     <li className="nav-item"><Link onClick={closeMenu} className="nav-link" href="/about">About Us</Link></li>
                   
