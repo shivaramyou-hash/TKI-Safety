@@ -44,10 +44,16 @@
 /************************************/	
 
 :root{
-	--primary-color			: #222222;
-	--secondary-color		: #F5F5F5;
-	--text-color			: #81848A;
-	--accent-color			: #FF9900;
+	/* Premium Brand Palette */
+	--brand-navy			: #0a2540; /* Deep Navy - Authority */
+	--brand-red				: #e63946; /* Vibrant Red - Action */
+	--brand-blue			: #009fe3; /* Logo Cyan - Accents */
+
+	/* Mapping */
+	--primary-color			: var(--brand-navy);   /* Headings/Titles */
+	--accent-color			: var(--brand-red);    /* Buttons/Highlights */
+	--secondary-color		: #f8f9fa;             /* Light Grey Backgrounds */
+	--text-color			: #4a4a4a;             /* Readable Dark Grey */
 	--white-color			: #FFFFFF;
 	--divider-color			: #EBEBEB;
 	--dark-divider-color	: #FFFFFF1A;
