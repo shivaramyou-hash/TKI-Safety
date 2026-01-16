@@ -825,7 +825,7 @@ export default function Home() {
             <div className="col-lg-12">
               <div className="dual-marquee-container">
                 {/* Row 1: Forward Motion */}
-                <div className="marquee-wrapper forward">
+                {/* <div className="marquee-wrapper forward">
                   <div className="swiper marquee-forward">
                     <div className="swiper-wrapper">
                       {["Shangri-La Touessrok", "Lux Hotels", "Victoria Beachcomber", "Anantara Hotel", "Outrigger Hotel", "The Residence", "Mauritius Ports Fire & Rescue", "Airports of Mauritius Ltd", "National Coast Guard", "Rodrigues Fire & Rescue", "Ministry of Education", "Ministry of Youth & Sports"].map((client, idx) => (
@@ -838,10 +838,10 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Row 2: Reverse Motion */}
-                <div className="marquee-wrapper reverse">
+                {/* <div className="marquee-wrapper reverse">
                   <div className="swiper marquee-reverse">
                     <div className="swiper-wrapper">
                       {["Public Service Commission", "Discipline Forces Service Commission", "Government Schools", "Central Electricity Board", "Mauritius Police Force", "Special Mobile Force (SMF)", "Emergency Response Service (ERS)", "Grays Inc Ltd", "Grays Distilling Ltd", "MADP Food Processing", "Royal Curve and Cut Ltd", "Cernol Chemicals Ltd", "Pharmacie Nouvelle", "Chantier Naval de l’Ocean Indien", "United Bus Service Ltd", "Domaine de Labourdonnais", "Good Living Mauritius", "Solon India"].map((client, idx) => (
@@ -854,7 +854,7 @@ export default function Home() {
                       ))}
                     </div>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
