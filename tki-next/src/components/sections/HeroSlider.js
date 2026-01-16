@@ -59,7 +59,7 @@ const HeroSlider = () => {
 
                       {/* Hero Button Start */}
                       <div className="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <Link href="/contact" className="btn-default">
+                        <Link href="/contact" className="btn-default btn-red">
                           <span>explore more</span>
                         </Link>
                       </div>
@@ -101,7 +101,7 @@ const HeroSlider = () => {
 
                       {/* Hero Button Start */}
                       <div className="hero-btn wow fadeInUp" data-wow-delay="0.4s">
-                        <Link href="/contact" className="btn-default">
+                        <Link href="/contact" className="btn-default btn-red">
                           <span>explore more</span>
                         </Link>
                       </div>

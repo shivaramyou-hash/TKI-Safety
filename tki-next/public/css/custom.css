@@ -48,6 +48,7 @@
 	--secondary-color		: #F5F5F5;
 	--text-color			: #81848A;
 	--accent-color			: #FF9900;
+	--red-color				: #FF0000;
 	--white-color			: #FFFFFF;
 	--divider-color			: #EBEBEB;
 	--dark-divider-color	: #FFFFFF1A;
@@ -208,6 +209,8 @@ body{
 	background-color: transparent;
 }
 
+
+
 .btn-default::before{
 	content: '';
 	position: absolute;
@@ -291,6 +294,18 @@ body{
 	width: 100%;
 	left: 0;
 	right: auto;
+}
+
+.btn-red {
+	background-color: var(--red-color);
+}
+
+.btn-red:hover {
+	background-color: transparent;
+}
+
+.btn-red span::after {
+	background: var(--red-color);
 }
 
 .btn-highlighted{
