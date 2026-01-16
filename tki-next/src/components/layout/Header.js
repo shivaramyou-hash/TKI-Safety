@@ -54,7 +54,7 @@ export default function Header() {
                 </ul>
                 {/* Topbar Qoute Button Start */}
                 <div className="topbar-qoute-btn">
-                  <Link href="/contact" className="btn-default"><span>Get a quote</span></Link>
+                  <Link href="/contact" className="btn-default"><span>Contact Us</span></Link>
                 </div>
                 {/* Topbar Qoute Button End */}
               </div>
