@@ -1,8 +1,6 @@
 import Script from 'next/script'
 import './globals.css'
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import Preloader from '@/components/layout/Preloader';
+import LayoutContent from '@/components/layout/LayoutContent';
 
 export const metadata = {
   title: 'TKI Safety',
@@ -37,10 +35,9 @@ export default function RootLayout({ children }) {
         <link href="/css/custom.css" rel="stylesheet" media="screen" />
       </head>
       <body>
-        <Preloader />
-        <Header />
-        {children}
-        <Footer />
+        <LayoutContent>
+          {children}
+        </LayoutContent>
 
         {/* Jquery Library File */}
         <Script src="/js/jquery-3.7.1.min.js" strategy="beforeInteractive" />
