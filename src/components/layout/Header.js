@@ -72,7 +72,7 @@ export default function Header() {
             <div className="container">
               {/* Logo Start */}
               <Link className="navbar-brand" href="/">
-                <img src="/images/footer-logo.svg" alt="Logo" />
+                  <img src="/images/logo.png" alt="TKI Safety" />
               </Link>
               {/* Logo End */}
 
@@ -87,12 +87,11 @@ export default function Header() {
                       <Link onClick={closeMenu} className="nav-link" href="/">Home</Link>
                      
                     </li>           
-{/* Products Menu - Temporarily disabled
                        <li 
                       className={`nav-item submenu mega-menu ${isForceClosed ? 'force-hide' : ''}`}
                       onMouseEnter={handleMouseEnter}
                     >
-                      <Link onClick={closeMenu} className="nav-link" href="/products">Products</Link>
+                      <Link onClick={closeMenu} className="nav-link" href="/coming-soon">Products</Link>
                       <ul className="mega-menu-wrapper">
                         <li>
                           <div className="container">
@@ -101,11 +100,11 @@ export default function Header() {
                                 <div className="mega-menu-section">
                                   <h4>Specialised Vehicles, Machinery & Equipment</h4>
                                   <ul>
-                                    <li><Link onClick={closeMenu} href="/products?type=fire-fighting">Fire Fighting</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=environmental-protection">Environmental Protection</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=disaster-management">Disaster Management</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=communication">Communication</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=aerial-rescue">Aerial Rescue</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Fire Fighting</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Environmental Protection</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Disaster Management</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Communication</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Aerial Rescue</Link></li>
                                   </ul>
                                 </div>
                               </div>
@@ -113,11 +112,11 @@ export default function Header() {
                                 <div className="mega-menu-section">
                                   <h4>Police and Military Equipment & Machinery</h4>
                                   <ul>
-                                    <li><Link onClick={closeMenu} href="/products?type=police-tactical">Police Tactical</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=environmental-protection">Environmental Protection</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=disaster-management">Disaster Management</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=communication">Communication</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=enforcement-monitoring">Enforcement and Monitoring</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Police Tactical</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Environmental Protection</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Disaster Management</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Communication</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Enforcement and Monitoring</Link></li>
                                   </ul>
                                 </div>
                               </div>
@@ -125,11 +124,11 @@ export default function Header() {
                                 <div className="mega-menu-section">
                                   <h4>Firefighting Equipment</h4>
                                   <ul>
-                                    <li><Link onClick={closeMenu} href="/products?type=detection-system">Detection System</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=alarm-system">Alarm System</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=fixed-installation">Fixed Installation</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=portable-firefighting">Portable Firefighting</Link></li>
-                                    <li><Link onClick={closeMenu} href="/products?type=signage">Signage</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Detection System</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Alarm System</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Fixed Installation</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Portable Firefighting</Link></li>
+                                    <li><Link onClick={closeMenu} href="/coming-soon">Signage</Link></li>
                                   </ul>
                                 </div>
                               </div>
@@ -138,10 +137,10 @@ export default function Header() {
                         </li>
                       </ul>
                     </li>
-*/}
-                    <li className="nav-item">
+
+                    {/* <li className="nav-item">
                       <Link onClick={closeMenu} className="nav-link" href="/coming-soon">Products</Link>
-                    </li>
+                    </li> */}
 {/* Training Menu - Temporarily disabled
                        <li 
                       className={`nav-item submenu mega-menu ${isForceClosed ? 'force-hide' : ''}`}
