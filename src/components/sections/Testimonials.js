@@ -74,13 +74,13 @@ export default function Testimonials() {
           <div className="swiper">
             <div className="swiper-wrapper" data-cursor-text="Drag">
               {/* Company Partner Items (Static for now, can also be componentized) */}
-              {[1, 2, 3, 4, 5, 6].map((num) => (
+              {/* {[1, 2, 3, 4, 5, 6].map((num) => (
                 <div className="swiper-slide" key={num}>
                   <div className="company-logo">
                     <img src={`/images/icon-company-${num}.svg`} alt="" />
                   </div>
                 </div>
-              ))}
+              ))} */}
             </div>
           </div>
         </div>

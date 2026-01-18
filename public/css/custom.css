@@ -914,7 +914,7 @@ header.main-header .header-sticky.active{
 	position: absolute;
     width: 100%;
 	padding: 0;
-	background: var(--accent-color);
+	background: var(--secondary-color);
 }
 
 .slicknav_menu ul{
@@ -932,7 +932,7 @@ header.main-header .header-sticky.active{
 	font-weight: 500;
 	text-transform: capitalize;
 	padding: 8px 20px;
-	color: var(--dark-color);
+	color: var(--primary-color);
 	line-height: normal;
 	margin: 0;
 	border-radius: 0 !important;
@@ -943,7 +943,7 @@ header.main-header .header-sticky.active{
 .slicknav_nav a:focus,
 .slicknav_nav .slicknav_row:hover{
 	background-color: transparent;
-	color: var(--primary-color);
+	color: var(--accent-color);
 }
 
 .slicknav_menu ul ul li a{
@@ -6044,6 +6044,17 @@ header.main-header .header-sticky.active{
 	.error-page-image img{
 		max-width: 80%;
 	}
+}
+
+/* Mobile Menu Spacing Fix for Mega Menu */
+@media only screen and (max-width: 991px) {
+    .mega-menu-section h4 {
+        padding: 10px 5px !important; /* Match 20px padding of main items */
+    }
+
+    .mega-menu-section ul li a {
+        padding-left: 5px !important; /* Slightly more indent for nesting */
+    }
 }
 
 @media only screen and (max-width: 767px){
